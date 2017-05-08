@@ -1,12 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import { devToolsEnhancer } from 'redux-devtools-extension'
+import { createStore, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+import { composeWithDevTools } from 'redux-devtools-extension'
 import todoApp from './reducers'
 import App from './components/App'
 
-let store = createStore(todoApp, devToolsEnhancer())
+let store = createStore(todoApp, composeWithDevTools(
+  applyMiddleware(thunk)
+))
 
 render(
   <Provider store={store}>
