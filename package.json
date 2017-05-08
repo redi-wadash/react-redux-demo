@@ -1,0 +1,24 @@
+{
+  "name": "react-redux-demo",
+  "version": "1.0.0",
+  "description": "Working example of React and Redux",
+  "main": "index.js",
+  "scripts": {
+    "bundle": "./node_modules/.bin/webpack"
+  },
+  "author": "Shogo Wada",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.5.1"
+  },
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.2"
+  }
+}
