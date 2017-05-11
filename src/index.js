@@ -11,7 +11,7 @@ const store = createStore(todoApp, composeWithDevTools(
     applyMiddleware(thunk)
 ))
 
-const mountNode = document.createElement("div")
+const mountNode = document.createElement('div')
 document.body.appendChild(mountNode)
 
 render(
