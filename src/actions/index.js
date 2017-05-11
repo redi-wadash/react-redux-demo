@@ -1,6 +1,12 @@
-/* Actions must be a plain object with "type" field.
+/*
+ * Actions must be a plain object with "type" field.
  *
- * These functions creating actions are called action creators.
+ * {
+ *   type: "ADD_TODO",
+ *   text: "Present React and Redux"
+ * }
+ *
+ * Functions creating actions are called action creators.
  */
 export const addTodo = (text) => {
   return {
@@ -8,7 +14,19 @@ export const addTodo = (text) => {
     text
   }
 }
-
+/*
+ * {
+ *   type: 'ADD_TODO',
+ *   text
+ * }
+ *
+ * is an ES6 syntax and is equivalent of the following:
+ *
+ * {
+ *   type: 'ADD_TODO',
+ *   text: text
+ * }
+ */
 export const setVisibilityFilter = (filter) => {
   return {
     type: 'SET_VISIBILITY_FILTER',
