@@ -7,13 +7,16 @@ import {composeWithDevTools} from 'redux-devtools-extension'
 import todoApp from './reducers'
 import App from './components/App'
 
-let store = createStore(todoApp, composeWithDevTools(
+const store = createStore(todoApp, composeWithDevTools(
     applyMiddleware(thunk)
 ))
+
+const mountNode = document.createElement("div")
+document.body.appendChild(mountNode)
 
 render(
     <Provider store={store}>
       <App />
     </Provider>,
-    document.getElementById('root')
+    mountNode
 )
