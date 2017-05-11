@@ -9,8 +9,7 @@ import visibilityFilter from './visibilityFilter'
  * - it cannot have side effects
  * - it must return the same value for the same input under any condition
  *
- * Mutation is side effect too, so reducer cannot mutate state.
- * Instead, it must return a new state.
+ * Mutation is side effect too, so reducer cannot mutate state. Instead, it must return a new state.
  *
  * For this application, our state looks like the following:
  *
@@ -32,7 +31,7 @@ import visibilityFilter from './visibilityFilter'
  * State should be minimum to leave less room for error.
  *
  * For example, note that it doesn't have separate list for visible TODO list
- * because it can be derived it from the master TODO list and the visibility filter.
+ * because the list can be derived from the master TODO list and the visibility filter.
  */
 const todoApp = combineReducers({
   todos,

@@ -3,7 +3,7 @@
  *
  * {
  *   type: "ADD_TODO",
- *   text: "Present React and Redux"
+ *   text: "First thing to do"
  * }
  *
  * Functions creating actions are called action creators.
