@@ -27,6 +27,10 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+/* When using Redux with React, it's typical to create a container components.
+ *
+ * Container components extract props from current Redux state.
+ */
 const VisibleTodoList = connect(
     mapStateToProps,
     mapDispatchToProps

@@ -1,3 +1,5 @@
+/* This is a reducer for todos.
+ */
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -13,6 +15,9 @@ const todos = (state = [], action) => {
   }
 }
 
+/* Remember reducers must be pure, so it must derive the ID from the input.
+ * It cannot generate UUID here, for example, because then its output differs even for the same input.
+ */
 const nextId = (state) => {
   const existingIds = state.map(t => t.id)
   if (existingIds.length === 0) {
@@ -26,6 +31,8 @@ const todo = (state = {}, action) => {
   switch (action.type) {
     case 'TOGGLE_TODO':
       if (state.id === action.id) {
+        /* It cannot mutate the state. It must to return a new state.
+         */
         return Object.assign({}, state, {
           completed: !state.completed
         })
