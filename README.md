@@ -4,7 +4,8 @@ Working example of React and Redux
 
 ## How to build
 
-1. `npm run bundle`
+1. `npm install`
+2. `npm run bundle`
 
 ## How to open the application
 
